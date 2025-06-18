@@ -39,12 +39,23 @@ An interactive web app built with Python and Streamlit that uses a **locally hos
 
 ### 📦 Setup
 
-# 1. Clone the repository, open the terminal and switch to the directory 
-cd llm-stock-bot
-
-# 2. (Optional but recommended) Create a virtual environment
+# 1. create directory (aigentor Clone the repository, open the terminal and switch to the directory 
+cd aiagent 
+# 2. Create a virtual and activate the environment
 python3 -m venv stockbot-env
 source stockbot-env/bin/activate
 
 # 3. Install dependencies
-pip install -r requirements.txt
+pip install streamlit yfinance plotly requests
+
+# 4. Install LLM (example - ollama)
+brew install ollama
+ollama pull llama3 (i used llama3:instruct	as it requires less resources)
+ollama run llama3 (you can run it either as a background service or as a process)
+# this will start ollama api server running at http://localhost:11434
+
+# 5. AI Agent for handling NLP from user chat box
+stock_bot.py # from the repo 
+streamlit run stock_bot.py
+
+# starts the app in browser at http://localhost:8501
