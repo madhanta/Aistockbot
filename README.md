@@ -49,13 +49,13 @@ source stockbot-env/bin/activate
 pip install streamlit yfinance plotly requests
 
 # 4. Install LLM (example - ollama)
-brew install ollama
-ollama pull llama3 (i used llama3:instruct	as it requires less resources)
-ollama run llama3 (you can run it either as a background service or as a process)
+- brew install ollama
+- ollama pull llama3 (i used llama3:instruct	as it requires less resources)
+- ollama run llama3 (you can run it either as a background service or as a process)
 # this will start ollama api server running at http://localhost:11434
 
 # 5. AI Agent for handling NLP from user chat box
-stock_bot.py # from the repo 
-streamlit run stock_bot.py
+- stock_bot.py # from the repo 
+- streamlit run stock_bot.py
 
 # starts the app in browser at http://localhost:8501
